@@ -1,0 +1,6 @@
+GTIN-8  , Product Name, Price
+13548353, Apples     ,0.50, 
+87945461, Bananas    ,0.60, 
+75612832, Pears      ,0.75, 
+79877466, Peaches    ,1.20, 
+57877464, Grapes     ,1.10, 
