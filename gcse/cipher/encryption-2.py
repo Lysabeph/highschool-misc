@@ -16,7 +16,7 @@ def Encryption(Key=Key):
         Text = input("\nPlease enter a phrase you would like to encrypt.\n>>> ")
 
     else:
-        TextFile('Encryption')
+        TextFile('encryption')
         Text = Text[:-1]
 
     for i in range(len(Text)):
@@ -32,11 +32,11 @@ def Encryption(Key=Key):
     print("\nYour ciphertext is: \"" + Ciphertext + "\"")
 
     if TextFileSup == True:
-        File = open("Encrypted.txt", 'w')
+        File = open("encrypted.txt", 'w')
         File.write(Ciphertext)
         File.close()
         time.sleep(1.0)
-        print("\nThis encryption has been saved in the 'Encrypted.txt' file.")
+        print("\nThis encryption has been saved in the 'encrypted.txt' file.")
 
 def Decryption(Key=Key):
 
@@ -47,7 +47,7 @@ def Decryption(Key=Key):
         Ciphertext = input("\nPlease enter a phrase you would like to decrypt.\n>>> ")
 
     else:
-        TextFile('Decryption')
+        TextFile('decryption')
 
     for i in range(len(Ciphertext)):
         if (ord(Ciphertext[i]) in (range(65, 65 + Key))) or (ord(Ciphertext[i]) in range(97, 97 + Key)):
@@ -62,23 +62,23 @@ def Decryption(Key=Key):
     print("\nYour message is: \"" + Text + "\"")
 
     if TextFileSup == True:
-        File = open("Decrypted.txt", 'w')
+        File = open("decrypted.txt", 'w')
         File.write(Text)
         File.close()
         time.sleep(1.0)
-        print("\nThis decryption has been saved in the 'Decrypted.txt' file.")
+        print("\nThis decryption has been saved in the 'decrypted.txt' file.")
 
 def TextFile(Type):
 
     global Ciphertext, Text
 
-    if Type == 'Encryption':
-        File = open("Decrypted.txt", 'r')
+    if Type == 'encryption':
+        File = open("decrypted.txt", 'r')
         Text = File.read()
         File.close()
 
-    elif Type == 'Decryption':
-        File = open("Encrypted.txt", 'r')
+    elif Type == 'decryption':
+        File = open("encrypted.txt", 'r')
         Ciphertext = File.read()
         File.close()
 

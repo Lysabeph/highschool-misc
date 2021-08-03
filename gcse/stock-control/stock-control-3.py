@@ -15,12 +15,12 @@ Reorder = []
 Target = []
 
 #Opens and reads the Stock file.
-f = open("Stock.txt", 'r')
+f = open("stock.txt", 'r')
 Stock = f.readlines()
 f.close()
 
 #Creates the Re-stocking file.
-f = open("Re-stocking Orders.txt", 'w')
+f = open("re-stocking-orders.txt", 'w')
 f.writelines("The following items have been sent off to be re-ordered (this is to maintain stock levels):\n")
 f.close()
 
@@ -116,7 +116,7 @@ for ii in range(len(Order)):
                 print("\nThe stock of item " + str(Code[i]) + " is running low!")
 
                 #Adds this item to the text file of items that need to be re-ordered and re-stocked.
-                f = open("Re-stocking Orders.txt", 'a')
+                f = open("re-stocking-orders.txt", 'a')
                 f.writelines(str(int(Target[i]) - int(Current[i])) + " items of " +
                              str(Code[i]) + " needs to be ordered.\n")
 
@@ -134,7 +134,7 @@ for ii in range(len(Order)):
                 print("\nThe stock has been updated for item " + Code[i] + ".")
 
 #Writes the new stock info to the Stock file.
-f = open("Stock.txt", 'w')
+f = open("stock.txt", 'w')
 
 for i in range(len(Stock)):
 

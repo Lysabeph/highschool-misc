@@ -15,7 +15,7 @@ Receipt = []
 Total = 0.00
 
 #Open the file of products and reads the contents.
-f = open("Products.txt", 'r')
+f = open("products.txt", 'r')
 print("Welcome to our shop!\nPlease choose an item from our catalogue:\n")
 print(f.read()); f.seek(0)
 Items = f.readlines()

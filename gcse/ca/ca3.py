@@ -21,7 +21,7 @@ SpeedLimit = 60
 Details = ''
 
 #Opens the new file.
-file = open("Fine Details.txt", "w")
+file = open("fine-details.txt", "w")
 file.writelines("Vehicles that will receive a fine for speeding:")
 file.close()
 
@@ -87,7 +87,7 @@ while True:
                     Details = lines[i].replace("\n", "")
 
                     #Opens the new file and adds the information to it.
-                    file = open("Fine Details.txt", "a")
+                    file = open("fine-details.txt", "a")
                     file.writelines("\n" + Details + ", " + str(mph) + " MPH")
                     file.close()
 
